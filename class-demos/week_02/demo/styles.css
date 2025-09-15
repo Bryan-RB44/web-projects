@@ -1,1 +1,41 @@
 /* This is a comment */
+p {
+    text-decoration: underline blue;
+}
+
+.blue-paragraph {
+    /* color: blue; */
+    color: white;
+    /* Float changes the block to be an in-line block and removes it from the flow of the page, so this has no longer 100% width */
+    float: right;
+}
+
+/* Highest in styling hierarchy */
+#important-paragraph {
+    font-size: 24px;
+    text-decoration: none;
+    /* DIsplay of none removes object from flow of the page */
+    /* display: none; */
+}
+
+#container {
+    width: 100px;
+    height: 100px;
+    background-color:aqua;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.object {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 20px;
+    left: 100px
+}
+
+.red-paragraph {
+    background-color: maroon;
+}
