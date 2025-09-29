@@ -1,0 +1,46 @@
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    /* percent is used for containers */
+    width: 100%;
+    height: 100%;
+
+    /* Background color to see the container */
+    background-color: beige;
+
+    /* Display of flex */
+    display: flex;
+    /* Quick center on screen */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+
+    background-color: yellow;
+
+    /* positioning every element inside box to use flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#move {
+    width: 200px;
+    height: 200px;
+
+    background-color: cyan;
+
+    /* A way to break flow layout */
+    /* Adjust the position */
+    position: absolute;
+    /* positions shouldn't really use percent */
+    top: 50px;
+    left: 500px;
+}
