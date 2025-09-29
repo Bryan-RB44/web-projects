@@ -69,6 +69,6 @@ window.onload = () =>{
             ":" + 
             date.getMinutes() + 
             ":" + 
-            date.getMinutes();
+            date.getSeconds()
     }, 1000);
 };
