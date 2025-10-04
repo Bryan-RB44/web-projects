@@ -1,0 +1,39 @@
+body {
+    background-color: #000000;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Styling for the foreground skyline */
+.scrollingCity_front {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.cityFront {
+    display: flex;
+    flex-direction: row;
+}
+.cityFront img {
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Styling for the background skyline */
+.scrollingCity_back {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+.cityBack {
+    display: flex;
+    flex-direction: row;
+}
+.cityBack img {
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+}
