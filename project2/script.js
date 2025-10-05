@@ -9,6 +9,9 @@ window.onload = ()=>{
     const cityBack = document.querySelector(".cityBack");
     cityBack.innerHTML += cityBack.innerHTML;
 
+    const stars = document.querySelector(".stars");
+    stars.innerHTML += stars.innerHTML;
+
     // This section uses GSAP to animate the scrolling effect for all of the image tracks
     // FORGROUND SKYLINE
     gsap.to(cityFront, {
@@ -21,6 +24,13 @@ window.onload = ()=>{
     gsap.to(cityBack , {
         x: "-50%",
         duration: 180,
+        repeat: -1,
+        ease: "none"
+    });
+    //STARS
+    gsap.to(stars, {
+        x: "-50%",
+        duration: 300,
         repeat: -1,
         ease: "none"
     });

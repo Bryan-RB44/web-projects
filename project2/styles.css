@@ -10,7 +10,7 @@ body {
     position: absolute;
     bottom: 0;
     overflow: hidden;
-    z-index: 1;
+    z-index: 10;
 }
 .cityFront {
     display: flex;
@@ -27,6 +27,7 @@ body {
     position: absolute;
     bottom: 0;
     overflow: hidden;
+    z-index: 0;
 }
 .cityBack {
     display: flex;
@@ -36,4 +37,27 @@ body {
     display: block;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+/* Styling for stars */
+.scrollingStars {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: -10;
+}
+.stars {
+    display: flex;
+    flex-direction: row;
+}
+.stars img {
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Styling for meteors */
+.randMeteor {
+    display: none;
+    z-index: -5;
 }
