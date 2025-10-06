@@ -69,7 +69,7 @@ window.onload = ()=>{
     // METEOR LOOP FUNCTION
     function meteorLoop() {
         // Variable to store the interval for when the meteor appears. Using CONST instead of LET since it's not being changed again later on, with the recalculation happening once the loop happens again
-        const meteorInterval = Math.floor(Math.random() * 5000) + 5000;
+        const meteorInterval = Math.floor(Math.random() * 5000) + 5000; //Every 5-10 seconds basically
 
         setTimeout(()=>{
             // The randomMeteor() function is called to pick out a random position, show the gif, and then hide it
