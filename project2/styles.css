@@ -1,28 +1,58 @@
+/* START Body styling */
 body {
+    /* Starting color */
     background-color: #000000;
     margin: 0;
     overflow: hidden;
+    /* While it looks redundant, I do NOT want any issues with the height so I lock it to the viewport's height just in case */
     height: 100vh;
-}
 
-/* Styling for the foreground skyline */
+    /* Setting up animation */
+    animation-name: backgroundGradient_Change;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* ANIMATION/KEYFRAMES */
+@keyframes backgroundGradient_Change {
+    0% {
+        background-color: #000000;
+    }
+    33% {
+        background-color: #0a0011;
+    }
+    66% {
+        background-color: #00030a;
+    }
+    100% {
+        background-color: #000000;
+    }
+}
+/* END Body styling */
+
+/* START Styling for the foreground skyline */
+/* NOTE: Because all of the images are the same size, almost every element has the same styling with minor differences (either with position or z-index) */
 .scrollingCity_front {
     position: absolute;
     bottom: 0;
     overflow: hidden;
+    /* Using z-index to specify what layers are on top of or behind other layers */
     z-index: 10;
 }
 .cityFront {
     display: flex;
+    /* Using flex-direction to make sure everything is strictly laid out as a row */
     flex-direction: row;
 }
 .cityFront img {
     display: block;
-    object-fit: cover;
+    /* Using flex-shrink in case any of the images become squished for whatever reason. It shouldn't because all of the images on their tracks are the same size but it's still just in case */
     flex-shrink: 0;
 }
+/* END Styling for the foreground skyline */
 
-/* Styling for the background skyline */
+/* START Styling for the background skyline */
 .scrollingCity_back {
     position: absolute;
     bottom: 0;
@@ -35,11 +65,11 @@ body {
 }
 .cityBack img {
     display: block;
-    object-fit: cover;
     flex-shrink: 0;
 }
+/* END Styling for the background skyline */
 
-/* Styling for stars */
+/* START Styling for stars */
 .scrollingStars {
     position: absolute;
     top: 0;
@@ -52,12 +82,14 @@ body {
 }
 .stars img {
     display: block;
-    object-fit: cover;
     flex-shrink: 0;
 }
+/* END Styling for stars */
 
-/* Styling for meteors */
+/* START Styling for meteors */
 .randMeteor {
     display: none;
+    position: absolute;
     z-index: -5;
 }
+/* END Styling for meteors */
