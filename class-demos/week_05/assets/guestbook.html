@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Class Five</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Stores all content in a container -->
+        <div class="container">
+            <div class= "container">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="guestbook.html">Guestbook</a>
+                </nav>
+            </div>
+
+            <h2>Write in the Textbook</h2>
+
+            <!-- This sends info from our client to our server -->
+            <form action="/submit" method="GET">
+                <input type="text" name="guest">
+                <textarea name="note"></textarea>
+                <input type="submit" value="write">
+            </form>
+        </div>
+        
+    </body>
+</html>
