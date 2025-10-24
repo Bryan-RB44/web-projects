@@ -1,0 +1,174 @@
+body {
+    margin: 0%;
+    background-color: #000000;
+}
+p { 
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* START top bar styling */
+.topContainer {
+    display: flex;
+    flex-direction: row;
+
+    background-color: #861e64;
+    color: #fff;
+
+    border-style: none none double none;
+    border-width: 0.75em;
+    border-color: #42072f;
+
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 1px;
+    padding: 1% 1rem;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex: 0.75;
+
+    justify-content: center;
+    align-items: center;
+}
+nav p {
+    margin: 1rem;
+    font-size: 2em;
+}
+.selectBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #861e64;
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.5s ease;
+}
+.selectBox:hover {
+    background-color: rgb(87, 19, 72);
+}
+.topContainer a {
+    text-decoration: none;
+    color: white;
+}
+/* END top bar styling */
+
+/* START website welcome section */
+.welcomeBox {
+    /* background-color: #cf4343; */
+    display: flex;
+
+    background: linear-gradient(30deg,#8a0303 0%, #cf4343 50%, #eb1717 100%);
+    color: #ffffff;
+
+    border-style: solid;
+    border-color: #ffd900;
+    border-width: 0.25rem;
+
+    height: 50%;
+    /* NOTE: Figure out how to do this and center it in the morning. */
+    /* width: 90%; */
+}
+.welcomeBox p {
+    margin-top: 0%;
+}
+/* END website welcome section */
+
+/* START middle section */
+.midBox_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.midBox {
+    display: flex;
+    width: 50%;
+
+    background-color: #353535;
+}
+.midBox p {
+    margin: 4%;
+    color: #ffffff;
+}
+/* END middle section */
+
+/* START bottom section */
+.bottomBox {
+    background-color: #a31818;
+    background: linear-gradient(0deg,#690808 0%, #a31818 50%, #ff3636 100%);
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    height: 25%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.bottomBox p {
+    margin: 0%;
+    padding: 1%;
+
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25em;
+}
+
+.bottomBox_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex: 1;
+
+    background-color: #ffd900;
+    border-style: groove;
+    border-color: #757500;
+    border-width: 1em;
+
+    margin: 2%;
+    padding: 2%;
+}
+
+.bottomBox_Container a {
+    text-decoration: none;
+    color: #000000;
+}
+/* END bottom section */
+
+/* START footer */
+footer {
+    color: #ffffff;
+    background-color: #690808;
+    padding: 1%;
+
+    border-style: dotted none none none;
+    border-width: 0.25em;
+    border-color: #ffd900;
+
+    text-align: right;
+    font-size: 1.5em;
+}
+/* END footer */

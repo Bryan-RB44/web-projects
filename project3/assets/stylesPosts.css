@@ -1,0 +1,99 @@
+body {
+    margin: 0%;
+    background-color: #000000;
+}
+p { 
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* START top bar styling */
+.topContainer {
+    display: flex;
+    flex-direction: row;
+
+    background-color: #861e64;
+    color: #fff;
+
+    border-style: none none double none;
+    border-width: 0.75em;
+    border-color: #42072f;
+
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 1px;
+    padding: 1% 1rem;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex: 0.75;
+
+    justify-content: center;
+    align-items: center;
+}
+nav p {
+    margin: 1rem;
+    font-size: 2em;
+}
+.selectBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #861e64;
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.5s ease;
+}
+.selectBox:hover {
+    background-color: #571348;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* END top bar styling */
+
+/* START post creator */
+.postCreator_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.postCreator {
+    width: 50%;
+    background-color: #f0ffff;
+    border-style: solid;
+    border-color: #ffd700;
+}
+.postCreator form {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    display: flex;
+    flex-direction: column;
+}
+.postSpacer {
+    margin-top: 5%;
+}
+textarea {
+  resize: vertical;
+}
+/* END post creator */
