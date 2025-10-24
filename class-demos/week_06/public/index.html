@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Week 06</title>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- Adding the enctype attribute  -->
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <!-- Label "for" attribute needs an id-->
+            <div class="form-title">
+                <label for="title">Enter a Title:</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="file-upload">
+                <label for="theImage">Upload</label>
+                <input type="file" name="theImage" id="theImage">
+            </div>
+            <textarea name="caption"></textarea>
+            <input type="Submit" value="Make Post">
+        </form>
+
+        <div id="all-posts">
+
+        </div>
+    </body>
+</html>
