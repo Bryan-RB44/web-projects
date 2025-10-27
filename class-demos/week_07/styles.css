@@ -1,0 +1,59 @@
+#body {
+    width: 100px;
+}
+
+/* Regular styling that'll always apply outside of media queries */
+html {
+    margin: 0%;
+    color: white;
+}
+
+/* Is this a computer */
+/* Basically an if statement*/
+@media screen and (orientation: landscape) {
+    /* Add normal CSS selectors */
+    body {
+        background: navy;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 550px) {
+    body {
+        background: magenta;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 768px) {
+    p {
+        font-size: 60px;
+        background: yellow;
+    }
+}
+
+/* Very Small */
+@media screen and (max-width: 576px) {
+    p {
+        font-size: 60px;
+        background: yellow;
+    }
+}
+/* Small */
+@media screen and (min-width: 576px) and (max-width: 786px) {
+    p {
+        font-size: 60px;
+        background: yellow;
+    }
+}
+/* Medium */
+@media screen and (min-width: 786px) and (max-width: 992px) {
+    p {
+        font-size: 60px;
+        background: lightgreen;
+    }
+}
