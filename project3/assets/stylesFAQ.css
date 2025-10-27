@@ -53,6 +53,10 @@ nav {
 nav p {
     margin: 1rem;
     font-size: 2em;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .selectBox {
     display: flex;
@@ -67,7 +71,7 @@ nav p {
     transition: background-color 0.5s ease;
 }
 .selectBox:hover {
-    background-color: rgb(87, 19, 72);
+    background-color: #571348;
 }
 a {
     text-decoration: none;
@@ -87,7 +91,7 @@ a {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: aqua;
+    background-color: black;
 }
 .pregunta {
     display: flex;
@@ -121,6 +125,11 @@ a {
 
     background-color: #000000;
     color: #ffffff;
+}
+.npc img {
+    margin: auto;
+    border-style: groove;
+    border-color: #ffffff;
 }
 .textBox {
     display: flex;

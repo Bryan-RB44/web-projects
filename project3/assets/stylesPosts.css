@@ -1,6 +1,7 @@
 body {
     margin: 0%;
-    background-color: #000000;
+    background-image: url(images/backCreate.png);
+    background-repeat: repeat;
 }
 p { 
     font-family: "Lexend", sans-serif;
@@ -49,6 +50,10 @@ nav {
 nav p {
     margin: 1rem;
     font-size: 2em;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .selectBox {
     display: flex;
@@ -72,14 +77,43 @@ a {
 /* END top bar styling */
 
 /* START post creator */
+.creatorTitle {
+    background-color: #0a0022;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 20px;
+
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1.5% auto;
+}
+
+.titleWidth {
+    width: 50%;
+}
+
+h2 {
+    text-align: center;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #fbff00;
+}
 .postCreator_Container{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2%;
 }
 .postCreator {
     width: 50%;
-    background-color: #f0ffff;
+    /* background-color: #b1dddd; */
+    background: linear-gradient(30deg, #b1dddd 0%, #cbb4f5 50%, #b1dddd 100%);
     border-style: solid;
     border-color: #ffd700;
 }

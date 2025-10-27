@@ -1,6 +1,8 @@
 body {
     margin: 0%;
-    background-color: #000000;
+    background-image: url(images/backHome.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 p { 
     font-family: "Lexend", sans-serif;
@@ -49,6 +51,10 @@ nav {
 nav p {
     margin: 1rem;
     font-size: 2em;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .selectBox {
     display: flex;
@@ -63,7 +69,8 @@ nav p {
     transition: background-color 0.5s ease;
 }
 .selectBox:hover {
-    background-color: rgb(87, 19, 72);
+    background-color: #571348;
+    cursor: pointer;
 }
 .topContainer a {
     text-decoration: none;
@@ -73,8 +80,8 @@ nav p {
 
 /* START website welcome section */
 .welcomeBox {
-    /* background-color: #cf4343; */
     display: flex;
+    flex-direction: column;
 
     background: linear-gradient(30deg,#8a0303 0%, #cf4343 50%, #eb1717 100%);
     color: #ffffff;
@@ -88,7 +95,38 @@ nav p {
     /* width: 90%; */
 }
 .welcomeBox p {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.splashContainer {
+    direction: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.titleSplash {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+
+    animation: textColor 10s linear infinite;
+}
+@keyframes textColor {
+  0% { color: #ffffff; }
+  25% { color: #acacff; }
+  50% { color: #f7f454; }
+  75% { color: #f2a1ff; }
+  100% { color: #ffffff; }
+}
+
+.splashRight {
     margin-top: 0%;
+    text-align: right;
 }
 /* END website welcome section */
 
@@ -105,11 +143,16 @@ nav p {
     display: flex;
     width: 50%;
 
-    background-color: #353535;
+    background-color: #3b076b;
+    border-style: solid;
+    border-color: #1c0235;
+    border-width: 0.5em;
 }
 .midBox p {
     margin: 4%;
     color: #ffffff;
+
+    font-size: 1.5em;
 }
 /* END middle section */
 
@@ -124,6 +167,8 @@ nav p {
     display: flex;
     justify-content: space-evenly;
     align-items: stretch;
+
+    border-top: #ffee00 groove 1em;
 }
 .bottomBox p {
     margin: 0%;
@@ -147,11 +192,15 @@ nav p {
     border-style: groove;
     border-color: #757500;
     border-width: 1em;
+    transition: background-color 0.5s ease, color 0.5s ease;
 
     margin: 2%;
     padding: 2%;
 }
-
+.bottomBox_Container:hover {
+    background-color: #0f073f;
+    color: #ffffff;
+}
 .bottomBox_Container a {
     text-decoration: none;
     color: #000000;
@@ -170,5 +219,17 @@ footer {
 
     text-align: right;
     font-size: 1.5em;
+
+    display: flex;
+}
+.hiddenText, .hiddenText a {
+    text-align: left;
+    color: #690808;
+    text-decoration: none;
+    transition: color 0.75s ease;
+    margin: 0;
+}
+.hiddenText a:hover {
+    color: #ffffff;
 }
 /* END footer */

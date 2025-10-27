@@ -1,6 +1,7 @@
 body {
     margin: 0%;
-    background-color: #000000;
+    background-image: url(images/backGal.png);
+    background-repeat: repeat;
 }
 p { 
     font-family: "Lexend", sans-serif;
@@ -49,6 +50,10 @@ nav {
 nav p {
     margin: 1rem;
     font-size: 2em;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .selectBox {
     display: flex;
@@ -87,27 +92,111 @@ a {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    padding: 2rem; 
+    box-sizing: border-box;
 }
 /* END gallery styling */
 
 /* START post box styling */
 .postBox {
     display: flex;
+    /* Using math here since unironically figuring out how to make the posts show up how I wanted them to without using grids was a pain */
+    flex: 1 1 calc(25% - 1.5rem);
+    max-width: calc(25% - 1.5rem);
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     border-style: groove;
     border-color: #ffd700;
     border-width: 5%;
-    border-radius: 5%;
+    border-radius: 20px;
 
     width: 20%;
     aspect-ratio: 1/1;
-    margin: 1%;
+    margin: 0%;
 
     background-color: #2a155c;
     text-align: center;
     cursor: pointer;
 }
+.postBox:hover {
+    background-color: #11062b;
+}
+.postBox:hover > p {
+    color: #a395e2;
+}
+.postName, .postGame {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
 /* END post box styling */
+
+/* START modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #00000099;
+
+    justify-content: center;
+    align-items: center;
+}
+.modalContent {
+    background-color: #1c1c1c;
+    padding: 20px 30px;
+    width: 90%;
+    max-width: 500px;
+
+    border-radius: 20px;
+    border-color: #010161;
+    border-width: 1em;
+    
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 20px #00000080;
+
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.closeButton {
+    display: inline-block;
+    background: #ee3939;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.closeButton:hover {
+    background: #ff6666;
+}
+
+#modalName {
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+#modalGame {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+
+    margin-bottom: 20px;
+}
+#modalText {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* END modal styling */
