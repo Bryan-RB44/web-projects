@@ -83,7 +83,9 @@ a {
     border-style: solid;
     border-radius: 20px;
 
-    width: 50%;
+    /* fix for mobile jarvey */
+    width: min(90%, 600px);
+    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +113,9 @@ h2 {
     margin-top: 2%;
 }
 .postCreator {
-    width: 50%;
+    /* fix for mobile jarvey */
+    width: min(90%, 600px);
+    margin-inline: auto;
     /* background-color: #b1dddd; */
     background: linear-gradient(30deg, #b1dddd 0%, #cbb4f5 50%, #b1dddd 100%);
     border-style: solid;

@@ -141,8 +141,9 @@ nav p {
 }
 .midBox {
     display: flex;
-    width: 50%;
-
+    /* fix for mobile jarvey */
+    width: min(90%, 600px);
+    margin-inline: auto;
     background-color: #3b076b;
     border-style: solid;
     border-color: #1c0235;

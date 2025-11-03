@@ -132,6 +132,9 @@ a {
     border-color: #ffffff;
 }
 .textBox {
+    /* fix for mobile jarvey */
+    width: min(90%, 600px);
+    margin-inline: auto;
     display: flex;
     flex: 4;
 
