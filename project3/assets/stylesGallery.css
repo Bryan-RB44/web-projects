@@ -169,6 +169,15 @@ a {
     font-optical-sizing: auto;
     font-style: normal;
 }
+/* mediaquery jarvey */
+@media (max-width: 768px) {
+    .modalContent {
+    width: 95%;
+    max-width: 400px;
+    padding: 15px 20px;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    }
+}
 .closeButton {
     display: inline-block;
     background: #ee3939;
