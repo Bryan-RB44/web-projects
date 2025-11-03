@@ -131,3 +131,79 @@ textarea {
   resize: vertical;
 }
 /* END post creator */
+/* Jarvey media queries */
+@media (max-width: 768px) {
+    .topContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+    }
+
+    .midBox,
+    .postCreator,
+    .gallery {
+        width: 90%;
+    }
+
+    .postBox {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+
+    .faqContainer {
+        flex-direction: column;
+    }
+
+    .questions,
+    .rightSide {
+        width: 100%;
+    }
+
+    .npc img {
+        width: 80%;
+        height: auto;
+    }
+
+    .textBox p {
+        font-size: 0.9rem;
+    }
+}
+
+/* smaller phones  */
+@media (max-width: 480px) {
+    .postBox {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .titleSplash {
+        font-size: 2rem;
+    }
+
+    .midBox p {
+        font-size: 1rem;
+    }
+
+    .bottomBox {
+        flex-direction: column;
+    }
+
+    .bottomBox_Container {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
