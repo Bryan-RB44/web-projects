@@ -83,7 +83,9 @@ a {
     border-style: solid;
     border-radius: 20px;
 
-    width: 50%;
+    /* fix for mobile jarvey */
+    width: min(90%, 600px);
+    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +113,9 @@ h2 {
     margin-top: 2%;
 }
 .postCreator {
-    width: 50%;
+    /* fix for mobile jarvey */
+    width: min(90%, 600px);
+    margin-inline: auto;
     /* background-color: #b1dddd; */
     background: linear-gradient(30deg, #b1dddd 0%, #cbb4f5 50%, #b1dddd 100%);
     border-style: solid;
@@ -131,3 +135,85 @@ textarea {
   resize: vertical;
 }
 /* END post creator */
+/* Jarvey media queries */
+@media (max-width: 768px) {
+    .topContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+    }
+
+    .midBox,
+    .postCreator,
+    .gallery {
+        width: 90%;
+    }
+
+    .postBox {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+
+    .faqContainer {
+        flex-direction: column;
+    }
+
+    .questions,
+    .rightSide {
+        width: 100%;
+    }
+
+    .npc img {
+        width: 80%;
+        height: auto;
+    }
+
+    .textBox p {
+        font-size: 0.9rem;
+    }
+}
+
+/* smaller phones  */
+@media (max-width: 480px) {
+    .postBox {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .titleSplash {
+        font-size: 2rem;
+    }
+
+    .midBox p {
+        font-size: 1rem;
+    }
+
+    .bottomBox {
+        flex-direction: column;
+    }
+
+    .bottomBox_Container {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+/* Global image rule jarvey */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
