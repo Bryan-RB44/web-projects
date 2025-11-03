@@ -229,3 +229,9 @@ a {
         margin: 1rem auto;
     }
 }
+/* Global image rule jarvey */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
