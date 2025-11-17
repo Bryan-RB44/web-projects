@@ -4,7 +4,7 @@ import { ref, reactive } from 'vue';
 const dragElement = ref(null);
 
 // Default position of the element
-const position = reactive({ x: 50, y: 450 });
+const position = reactive({ x: 1100, y: 0 });
 let offset = { x: 0, y: 0 };
 let isDragging = false;
 

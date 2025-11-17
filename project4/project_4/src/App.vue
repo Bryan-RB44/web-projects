@@ -1,6 +1,7 @@
 <script setup>
 import {onMounted, ref} from 'vue'
 import changeBack from './changeBack.vue'
+// NOTE: Most comments related to dragging feature is in dragAbout.vue since it was the first one made
 import dragAbout from './dragAbout.vue';
 import dragImg from './dragImage.vue';
 import dragText from './dragText.vue';
@@ -81,6 +82,7 @@ function addPost() {
         </div>
         <textarea v-model="newPost_Text" placeholder="Type Something" rows="3" style="width: 100%; resize: none;"></textarea>
         <button @click="addPost">Post</button>
+        <p class="seeMe2">(Refresh page to reset notes)</p>
       </dragCreate>
 
       <!-- Post-it Div -->

@@ -8,8 +8,8 @@ const playIcon = '/images/boomBox.png';
 const pauseIcon = '/images/boomBox.gif';
 
 const tracks = [
-  { name: "Foreigner in Zeal", src: "/audio/F_in_Z.mp3" },
   { name: "Paradise, Paradise", src: "/audio/Paradise_Paradise.mp3" },
+  { name: "Foreigner in Zeal", src: "/audio/F_in_Z.mp3" },
   { name: "Hanging with the Boys", src: "/audio/Hanging_with_the_Boys.mp3" },
   { name: "Volume Adjustment", src: "/audio/volume_Adjustment.mp3" },
   { name: "WATER WORLD", src: "/audio/waterWorld.mp3" }
@@ -60,6 +60,7 @@ function nextTrack() {
 
 <template>
   <dragMusic>
+    <p>Click Me!</p>
     <img :src="isPlaying ? pauseIcon : playIcon" class="button-icon" @click.stop="toggleMusic"/>
     <p>Now Playing:<br>{{ currentTrack.name }}</p>
   </dragMusic>

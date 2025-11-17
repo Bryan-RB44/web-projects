@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from 'vue'
 
-// Variable for the background colors and name.
+// Variable containing the background colors and names.
 const backGround = [
   { name: 'Default Space', value: 'linear-gradient(30deg, #000000 0%, #050505 100%)' },
   { name: 'Tulips', value: 'linear-gradient(180deg, #ffafbd, #ffc3a0)' },
@@ -16,17 +16,21 @@ const backGround = [
   { name: 'Galactic Dust', value: 'linear-gradient(348deg,#0a0038 0%, #3b0066 50%, #9d4edd 100%)' }
 ];
 
+// Index variable to keep track of what background we're on
 const index = ref(0);
+// differentBack is the new background gradient
 const differentBack = ref(backGround[index.value].value);
+// currentBack_Name is the new background's name
 const currentBack_Name = ref(backGround[index.value].name);
 
-// Following function cycles through backgrounds
+// Function to cycle through backgrounds
 function changeBack() {
   index.value = (index.value + 1) % backGround.length;
   const { name, value } = backGround[index.value];
+  
   differentBack.value = value;
   currentBack_Name.value = name;
-  console.log('This should work')
+  // console.log('This should work')
 }
 </script>
 

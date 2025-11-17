@@ -9,6 +9,7 @@ const position = reactive({ x: 100, y: 100 });
 let offset = { x: 0, y: 0 };
 let isDragging = false;
 
+// Function for when the element gets dragged
 function startTo_Drag(event) {
   isDragging = true;
   offset = {
@@ -19,6 +20,7 @@ function startTo_Drag(event) {
   document.addEventListener('pointerup', stopDrag);
 }
 
+// Function for dragging state
 function onDrag(event) {
   if (isDragging) {
     let newX = event.clientX - offset.x;
@@ -38,6 +40,7 @@ function onDrag(event) {
   }
 }
 
+// Function for stopping draggability
 function stopDrag() {
   isDragging = false;
   document.removeEventListener('pointermove', onDrag);
