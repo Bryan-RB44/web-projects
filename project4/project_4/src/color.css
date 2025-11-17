@@ -1,0 +1,5 @@
+/* PLEASE READ */
+/* If this somehow slips through the cracks: This CSS file is just to more easily create gradients (since you don't get the preview in the scripts of vue files) */
+div {
+    background: linear-gradient(0deg,#949494 0%, #f5e2ff 33%, #c5d6ff 66%, #e08cff 100%);
+}
