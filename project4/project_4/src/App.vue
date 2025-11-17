@@ -16,6 +16,7 @@ onMounted( ()=>{
 const posts = ref([]);
 const newPost_Text = ref('');
 
+// Function to add posts
 function addPost() {
   if (newPost_Text.value.trim()) {
     posts.value.push(newPost_Text.value.trim());
@@ -70,6 +71,7 @@ function addPost() {
         <img src="/images/YourSpaceLogo.png"></img>
       </dragImg>
 
+      <!-- Music div -->
       <musicBox />
 
       <!-- Post Creator Div -->
