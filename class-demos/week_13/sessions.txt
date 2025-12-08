@@ -1,0 +1,2 @@
+{"_id":"b_TExELcLIkKnmW-EPLAfc3p1qwpuOsU","session":{"cookie":{"path":"/","_expires":{"$$date":1765314620966},"originalMaxAge":86400000,"httpOnly":true}},"expiresAt":{"$$date":1765314620966},"createdAt":{"$$date":1765228220989},"updatedAt":{"$$date":1765228220989}}
+{"_id":"b_TExELcLIkKnmW-EPLAfc3p1qwpuOsU","session":{"cookie":{"originalMaxAge":86400000,"expires":{"$$date":1765314621146},"httpOnly":true,"path":"/"}},"expiresAt":{"$$date":1765314621146},"createdAt":{"$$date":1765228220989},"updatedAt":{"$$date":1765228221150}}
