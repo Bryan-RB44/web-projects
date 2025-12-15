@@ -1,0 +1,349 @@
+/* START basic html styling */
+body {
+    margin: 0;
+    overflow: hidden;
+
+    background: #000000;
+}
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 4em;
+    margin-bottom: 75px;
+}
+p {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+}
+/* END basic html styling */
+
+/* START Title Screen */
+#titleScreen {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #000000f3;
+    color: #ffffff;
+
+    font-family: sans-serif;
+
+    pointer-events: all;
+}
+#titleScreen .titleCard {
+    text-align: center;
+    padding: 24px 28px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    background: #141414e6;
+    width: 100vw;
+    height: 100vh;
+}
+#startBtn {
+    margin-top: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 2em;
+}
+#startBtn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* END Title Screen */
+
+/* START Title Screen Images */
+.containorial {
+    display: flex;
+    justify-content: center;
+
+    gap: 25%;
+}
+.tutorial {
+    width: 256px;
+    height: 256px;
+
+    background-image: url("images/tutorialThing.png");
+    background-size: 256px;
+    image-rendering: pixelated;
+}
+.twotorial {
+    width: 256px;
+    height: 256px;
+
+    background-image: url("images/twotorialThing.png");
+    background-size: 256px;
+    image-rendering: pixelated;
+}
+/* END Title Screen Images */
+
+#playerSprite {
+    width: 64px;
+    height: 64px;
+
+    background-image: url("images/characterSprite.png");
+    /* Just in case something happens that causes the image to not fill the div for whatever reason */
+    background-repeat: no-repeat;
+    background-size: 128px 64px;
+    image-rendering: pixelated;
+    /* border: 1px solid #ff0000; */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* START Elements */
+/* Obstacles/Walls/Whatever You Want to Call Them */
+/* Default Obstacle */
+.obstacle {
+    position: absolute;
+    /* Below will define hitbox sizes */
+    width: 64px;
+    height: 64px;
+
+    background-image: url("images/rock_obj.png");
+    background-size: 64px;
+    image-rendering: pixelated;
+    /* border: 1px solid #ff0000; */
+}
+.obstacle.bricks {
+    background-image: url("images/bricksObj.png");
+}
+.obstacle.trashCan {
+    background-image: url("images/trashObj.png");
+}
+.obstacle.pillar {
+    background-image: url("images/pillarObj.png");
+}
+.obstacle.lunch {
+    background-image: url("images/lunchbox.png");
+}
+.obstacle.wheelBarrow {
+    background-image: url("images/wBarrow.png");
+}
+.obstacle.headerEl {
+    background-image: url("images/h1Element.png");
+}
+.obstacle.paraEl {
+    background-image: url("images/pElement.png");
+}
+.obstacle.girderBar {
+    background-image: url("images/girder.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.glitter {
+    background-image: url("images/glitter.png");
+}
+.obstacle.stars {
+    background-image: url("images/oldStars.png");
+}
+.obstacle.wip {
+    background-image: url("images/wipOld.png");
+}
+
+
+/* Directions */
+.obstacle.upSign {
+    background-image: url("images/upSign.png");
+}
+.obstacle.downSign {
+    background-image: url("images/downSign.png");
+}
+.obstacle.leftSign {
+    background-image: url("images/leftSign.png");
+}
+.obstacle.rightSign {
+    background-image: url("images/rightSign.png");
+}
+
+/* Objects */
+.obstacle.interactiveSign {
+    background-image: url("images/sign_obj.png");
+}
+.obstacle.altSign {
+    background-image: url("images/altSign.png");
+}
+.obstacle.bookShelf {
+    background-image: url("images/bookShelf.png");
+    width: 256px;
+    height: 128px;
+    background-size: 128px 64px;
+}
+.obstacle.anipainting {
+    background-image: url("images/animateBall.gif");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.painting1 {
+    background-image: url("images/painting1.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.painting2 {
+    background-image: url("images/painting2.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.painting3 {
+    background-image: url("images/painting3.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.painting4 {
+    background-image: url("images/painting4.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.painting5 {
+    background-image: url("images/painting5.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.painting6 {
+    background-image: url("images/painting6.png");
+    width: 128px;
+    height: 64px;
+    background-size: 128px 64px;
+}
+.obstacle.pileDiv {
+    background-image: url("images/divs.png");
+}
+
+/* NPCs */
+.obstacle.htmlNPC {
+    background-image: url("images/htmlNPC.png");
+}
+.obstacle.htmlNPC_2 {
+    background-image: url("images/htmlNPC.png");
+    transform: scaleX(-1);
+}
+.obstacle.cssNPC {
+    background-image: url("images/cssNPC.png");
+}
+.obstacle.cssNPC_2 {
+    background-image: url("images/cssNPC.png");
+    transform: scaleX(-1);
+}
+.obstacle.jsNPC {
+    background-image: url("images/jsNPC.png");
+}
+.obstacle.jsNPC_2 {
+    background-image: url("images/jsNPC.png");
+    transform: scaleX(-1);
+}
+.obstacle.gmlNPC {
+    background-image: url("images/gml.png");
+}
+
+.interactiveObj {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    /* border: 1px solid #ffff00; */
+    cursor: pointer;
+}
+/* END Elements */
+
+/* START Room Colors/Themes */
+body.roomStart {
+  background: #000000;
+}
+body.roomDef {
+  background: #080808;
+}
+body.roomWest2 {
+    background-color: #121620;
+}
+body.roomWest3 {
+    background-color: #0f1427;
+}
+body.roomHTML {
+    background-color: #040b24;
+}
+body.roomNorth2 {
+    background-color: #252525;
+}
+body.roomNorth3 {
+    background-color: #363636;
+}
+body.roomCSS {
+    background-color: #494949;
+}
+body.roomEast2 {
+    background-color: #160d16;
+}
+body.roomEast3 {
+    background-color: #1a0615;
+}
+body.roomJS {
+    background-color: #14001a;
+}
+body.roomSecret {
+    background:#0b0f1a;
+}
+body.roomSecreter {
+    background:#08352a;
+}
+/* END Room Colors/Themes */
+
+/* START Textbox Styling */
+#dialogOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: #00000080;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+/* Hidden when not in use */
+#dialogOverlay.dialog-hidden {
+    display: none;
+}
+/* Textbox itself */
+#dialogBox {
+    background-color: #222;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    max-width: 320px;
+    border: 2px solid #fff;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+}
+#dialogBox button {
+    margin-top: 12px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+#dialogClose {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+}
+#dialogClose:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* CLOSE Textbox Styling */

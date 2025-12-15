@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 5</title>
+
+        <link rel="icon" type="image/x-icon" href="/faviClick.ico">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <!-- GSAP Library (for the title screen transition) -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+        <!-- SCRIPTS HERE -->
+        <script src="collision.js"></script>
+        <script src="interactive.js"></script>
+        <script src="map.js"></script>
+        <script src="titleScreen.js"></script>
+        <script src="playerScript.js"></script>
+    </head>
+
+    <body>
+        <div id="titleScreen">
+            <div class="titleCard">
+                <h1>Exploring the Web</h1>
+                <p> By Bryan Briones</p>
+                <div class="containorial">
+                    <div class="tutorial"></div>
+                    <div class="twotorial"></div>
+                </div>
+                <div class="buttonContainer">
+                    <button id="startBtn">Start</button>
+                </div>
+                <p>(Best Enjoyed on Larger Screens)</p>
+            </div>
+        </div>
+
+        <div id="playerSprite"></div>
+
+        <!-- Decorative Elements -->
+        <div class="obstacle" style="left: 25%; top: 50%;"></div>
+        <div class="obstacle" style="left: 75%; top: 50%;"></div>
+        <div class="obstacle" style="left: 50%; top: 25%;"></div>
+
+        <!-- Interactive Elements -->
+        <div 
+            class="obstacle interactiveObj interactiveSign"
+            style="left: 50%; top: 30%;"
+            data-text="West, North, and East. These are your paths of the Web.">
+        </div>
+
+        <!-- Textbox for Interactive Elements -->
+        <div id="dialogOverlay" class="dialog-hidden">
+            <div id="dialogBox">
+                <p id="dialogText"></p>
+                <button id="dialogClose">Close</button>
+            </div>
+        </div> 
+    </body>
+</html>
