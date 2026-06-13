@@ -41,7 +41,8 @@ window.onload = () => {
     // Gallery Section
     const gallery = document.querySelector(".gallery");
     if (gallery) {
-        fetch("/api/posts")
+        //NOTE TO SELF: Changed this from "/api/posts" to "api/posts" for testing purposes.
+        fetch("api/posts")
         .then((res) => res.json())
         .then((posts) => {
             gallery.innerHTML = "";
